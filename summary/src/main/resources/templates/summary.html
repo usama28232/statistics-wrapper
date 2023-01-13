@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.summary.index.title}"></title>
+    <link th:href="@{/css/summary.css}" rel="stylesheet">
+</head>
+<body>
+<div>
+    <a th:href="@{/public/summary/reset}" th:text="#{app.summary.index.reset.btn}"></a>
+    <!--    jamon Table    -->
+    <div th:utext="${report}"></div>
+    <!--    jamon Table    -->
+    <a th:href="@{/public/summary/reset}" th:text="#{app.summary.index.reset.btn}"></a>
+</div>
+
+<div>
+    <ul class="tree">
+        <!-- Root node (Category) -->
+        <li th:each="cache : ${caches}">
+            <div class="cache-name" th:text="${cache.key}"></div>
+            <ul class="cache-keys">
+                <!-- Sub category -->
+                <li th:each="key: ${cache.value}">
+                    <div class="sticky padding-bot12" th:text="${key}"></div>
+                </li> <!-- Second level node -->
+            </ul>
+        </li>
+    </ul>
+</div>
+<br/>
+<br/>
+</body>
+</html>

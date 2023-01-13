@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/applicationName">
+    <Resource name="ora"
+              url="jdbc:oracle:thin:@//localhost/test-db"
+              username="sa"
+              password="sasasa"
+              driverClassName="oracle.jdbc.OracleDriver"
+              type="javax.sql.DataSource"
+              maxActive="100"
+              maxIdle="-1"
+              maxWait="30000"
+              />
+</Context>
