@@ -16,7 +16,7 @@ public class QueryExtractor implements QueryBuilder {
     public String build() {
         String wh = this.getWhereClause();
         wh = this.getWhereUserGroup(wh);
-        return this.getSelection(wh).concat(wh).concat(" group by ").concat(this.entity.getAggregateField());
+        return this.getSelection(wh).concat(wh);
     }
 
     private String getAggregateFunctions(String aField) {

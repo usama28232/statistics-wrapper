@@ -6,7 +6,7 @@ import com.practice.web.services.SchemaService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/schema")
+@RequestMapping("/api")
 public class SchemaController {
 
     private SchemaService service;
@@ -22,8 +22,8 @@ public class SchemaController {
         return this.cacheService.clearCacheByName(cacheName);
     }
 
-    @PostMapping("get")
-    public Schema getPortalAPI(@RequestBody Schema request) {
+    @PostMapping("/schema")
+    public Schema getSchema(@RequestBody Schema request) {
         return this.service.getStatsForSchema(request);
     }
 
