@@ -32,13 +32,12 @@ For Example: The test data contain entries for the following data request:
 
 ```
 curl --request POST \
-  --url http://localhost:8081/app/schema/get \
+  --url http://localhost:8081/rest/api/schema \
   --header 'Content-Type: application/json' \
-  --header 'accept: application/xml' \
   --data '{
-	"org": "0001",
+	"org":"0001",
 	"key": "censusk17"
-}'
+}''
 ```
 
 
