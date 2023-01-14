@@ -8,11 +8,11 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
 
-@Profile("threads")
+@Profile("threading")
 @Configuration
 public class AppTaskExecutor {
 
-    @Value("${app.thread.prefix:u28232}")
+    @Value("${app.thread.prefix:mu-}")
     private String threadNm;
 
     @Value("${app.core.thread.pool.size:30}")

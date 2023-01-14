@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 
 import javax.cache.Cache;
 import javax.cache.CacheManager;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+//import javax.persistence.EntityManager;
+//import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,8 +18,8 @@ public class CacheService {
     private final static String CACHE_NOT_INIT_MSG = "app.cache.not.initialized";
     private final CacheManager cacheManager;
 
-    @PersistenceContext
-    private EntityManager entityManager;
+//    @PersistenceContext
+//    private EntityManager entityManager;
 
     public CacheService(CacheManager cacheManager) {
         this.cacheManager = cacheManager;
@@ -30,10 +30,10 @@ public class CacheService {
      *
      * @return true
      */
-    public boolean clearSessionCache() {
-        this.entityManager.clear();
-        return true;
-    }
+//    public boolean clearSessionCache() {
+//        this.entityManager.clear();
+//        return true;
+//    }
 
     /**
      * Get All Stored Keys

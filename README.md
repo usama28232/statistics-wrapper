@@ -41,6 +41,11 @@ curl --request POST \
 }'
 ```
 
+So, the current business logic goes as:
+
+![Business Login Flow](statistics-businesslogic-flow.png)
+
+
 ## Cache
 
 Application is configured to create cache for the following entries:
@@ -62,8 +67,14 @@ Feel free to extend/modify according to your needs
 
 ## Roadmap
 
-After completion of this project, I have planned to move it to micro-service architecture by splitting the **Metadata** and **StatsBuilder + Execution** into separate micro-services
+~~After completion of this project, I have planned to move it to micro-service architecture by splitting the **Metadata** and **StatsBuilder + Execution** into separate micro-services~~
 
+I have uploaded the microservice version in branch ``microservices``
+
+Application Flow is now divided as:
+
+![Business Login Flow](statistics-microservice-application-flow.png
+)
 
 ---------------------------------------
 

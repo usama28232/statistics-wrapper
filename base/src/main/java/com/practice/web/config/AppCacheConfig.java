@@ -12,6 +12,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.jcache.JCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import javax.cache.CacheManager;
 import javax.cache.Caching;
@@ -28,15 +29,17 @@ public class AppCacheConfig {
     @Value("${app.cache.off-heap:100}")
     private int offHeap;
 
-    @Value("${app.configured.cache.list}")
+    @Value("${app.configured.cache.list:null}")
     private List<String> configuredCaches;
 
     @Bean
     public CacheManager appCacheManager() {
         EhcacheCachingProvider provider = (EhcacheCachingProvider) Caching.getCachingProvider();
         Map<String, CacheConfiguration<?, ?>> caches = new HashMap<>();
-        for (String cache : this.configuredCaches) {
-            caches.put(cache, getPropBasicCache());
+        if (this.configuredCaches != null && this.configuredCaches.size() > 0) {
+            for (String cache : this.configuredCaches) {
+                caches.put(cache, getPropBasicCache());
+            }
         }
         DefaultConfiguration configuration = new DefaultConfiguration(caches, provider.getDefaultClassLoader());
         return new JCacheCacheManager(provider.getCacheManager(provider.getDefaultURI(), configuration)).getCacheManager();

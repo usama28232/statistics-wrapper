@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>app-summary</artifactId>
+    <artifactId>summary</artifactId>
 
     <dependencies>
         <!--    Actuator    -->
@@ -47,7 +47,7 @@
 
         <dependency>
             <groupId>com.practice</groupId>
-            <artifactId>app-base</artifactId>
+            <artifactId>base</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

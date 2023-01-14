@@ -6,7 +6,10 @@
 	<modules>
 		<module>base</module>
 		<module>summary</module>
-		<module>rest</module>
+		<module>rest-application</module>
+        <module>discovery-server</module>
+		<module>menu-application</module>
+		<module>stats-application</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
