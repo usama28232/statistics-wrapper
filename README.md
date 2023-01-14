@@ -69,7 +69,7 @@ Feel free to extend/modify according to your needs
 
 ~~After completion of this project, I have planned to move it to micro-service architecture by splitting the **Metadata** and **StatsBuilder + Execution** into separate micro-services~~
 
-I have uploaded the microservice version in branch ``microservices``
+I have uploaded the microservice version in branch ``microservice-arch``
 
 Application Flow is now divided as:
 
