@@ -131,4 +131,4 @@ server.error.include-stacktrace=on_param
 
 ### Feel free to edit/expand/explore this repository
 
-For feed back and queries, reach me on Linkedin at [here](https://www.linkedin.com/in/usama28232/?original_referer=)
+For feed back and queries, reach me on LinkedIn at [here](https://www.linkedin.com/in/usama28232/?original_referer=)
